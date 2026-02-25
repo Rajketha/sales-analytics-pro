@@ -2,11 +2,6 @@
 
 A full-stack, interactive Sales Analytics Web Application designed for data analysts and business intelligence professionals. This project demonstrates a complete data lifecycle from raw transactional data to actionable insights.
 
-![Dashboard Preview](https://github.com/RevanthTellakula/sales-analytics-pro/blob/main/screenshot.png?raw=true)
-
-> [!TIP]
-> **View the [Full Business Case Study](./docs/case_study.md)** for a deep dive into revenue trends, SQL analysis, and strategic recommendations.
-
 ## 🚀 Key Features
 
 ### 🖥️ Interactive Live Dashboard
