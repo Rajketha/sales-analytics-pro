@@ -9,27 +9,42 @@ A full-stack, interactive Sales Analytics Web Application designed for data anal
 
 ## 🚀 Key Features
 
-- **Live Dashboard**: Real-time KPI tracking (Revenue, Profit, Margin, AOV) with dynamic Chart.js visualizations.
-- **"Work on My Data" Mode**: Upload your own CSV and the dashboard transforms instantly.
-- **Smart Data Cleaning**: Backend pipeline handles title-casing, date formatting, and range validation automatically.
-- **Fuzzy Column Mapping**: Automatically detects and maps divergent column names (e.g., "Item" → "Product").
-- **AI-Generated Insights**: SQL-driven engine detects regional risks and growth trends on-the-fly.
-- **Dark Glassmorphism UI**: High-end UX designed to make data engagement intuitive and visually stunning.
+### 🖥️ Interactive Live Dashboard
+- **Real-time KPI Tracking**: Monitor critical business metrics like Total Revenue, Profit, Margin, and Average Order Value (AOV) instantly.
+- **Dynamic Visualizations**: High-performance charts powered by **Chart.js**, including:
+    - **Monthly Trend Lines**: Track revenue and profit growth over time.
+    - **Regional Doughnuts**: Visualize market share and margins across geographic territories.
+    - **Product Performance**: Horizontal bar charts identifying top-selling items.
+    - **Customer Demographics**: Age distribution analysis to understand buyer personas.
 
-## 🛠️ Tech Stack
+### 🧠 Automated Insight Engine
+- **SQL-Driven Intelligence**: A backend engine that runs complex SQL queries to detect business trends automatically.
+- **Natural Language Insights**: Generates 5-10 actionable bullet points after every data update, identifying regional risks, growth spikes, and payment preference shifts.
+- **Dynamic Context**: Insights update instantly when new data is imported or manually added.
 
-- **Backend**: Python, Flask
-- **Database**: SQLite
-- **Frontend**: Vanilla JavaScript, CSS (Custom Design System), Chart.js
-- **Analysis**: Advanced SQL (Window Functions, CTEs, Cohort Analysis)
+### 📥 "Work on My Data" Mode
+- **CSV Bulk Import**: Upload custom datasets to transform the dashboard's context instantly.
+- **Fuzzy Column Mapping**: Intelligent logic that automatically detects and maps divergent column names (e.g., "Item" → "Product", "Sales" → "Revenue").
+- **Clear & Append Options**: Flexibility to either start fresh or add to existing historical data.
+
+### 🛠️ Smart Data Cleaning Pipeline
+- **Auto-Normalization**: Backend pipeline handles title-casing, white-space stripping, and standardizing regional names.
+- **Intelligent Validation**: Automatic date formatting, currency symbol stripping, and duplicate Order ID detection.
+- **Predictive Defaults**: Smartly calculates missing values (like Cost Price) based on historical product margins.
+
+### 🍱 Tech Stack & UI
+- **Backend**: Python, Flask, SQLite.
+- **Frontend**: Vanilla JavaScript (ES6+), CSS Grid/Flexbox, Chart.js.
+- **Design System**: Premium **Dark Glassmorphism** UI featuring frosted effects, smooth transitions, and high-contrast typography.
+- **Analysis**: Advanced SQL (Window Functions, CTEs, Cohort Analysis).
 
 ## 📂 Project Structure
 
 ```text
-sales-webapp/
+sales-analytics-pro/
 ├── app.py                  # Flask Core: API + Insights Engine
-├── init_db.py              # Database Schema & Indexing
-├── seed_data.py            # Initial seed of 50K transactional rows
+├── init_db.py              # Database Schema & Migrations
+├── seed_data.py            # Initial seed of 60K transactional rows
 ├── static/
 │   ├── style.css           # Premium Dark UI Design
 │   └── app.js              # SPA Logic & Chart Lifecycle
@@ -41,7 +56,7 @@ sales-webapp/
 
 1. **Clone & Install**:
    ```bash
-   git clone https://github.com/RevanthTellakula/sales-analytics-pro.git
+   git clone https://github.com/Rajketha/sales-analytics-pro.git
    cd sales-analytics-pro
    pip install flask
    ```
@@ -49,6 +64,7 @@ sales-webapp/
 2. **Initialize & Seed**:
    ```bash
    python init_db.py
+   # (Optional) Seed with sample data
    python seed_data.py
    ```
 
@@ -57,11 +73,6 @@ sales-webapp/
    python app.py
    # Open http://localhost:5000 in your browser
    ```
-
-## 📊 Sample SQL Techniques Used
-- **Window Functions**: `RANK()`, `LAG()`, `NTILE()` for growth and Pareto analysis.
-- **CTEs**: For readable multi-step transformations.
-- **CASE Statements**: For complex regional pivots and discount impact studies.
 
 ---
 *Created as a high-performance Data Analyst portfolio piece.*
